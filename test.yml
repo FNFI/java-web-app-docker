@@ -17,9 +17,12 @@ spec:
   spec: #pod spec
    containers:
    - name: javawebapp #container name
-     image: chaitradockerhub/java-web-app:1
+     image: chaitradockerhub/java-web-app:IMG_TAG
      ports:
      - containerPort: 8080
+     env:
+     - name: BUILD_NUMBER
+       value: 1
 ---
 apiVersion: v1
 kind: Service
